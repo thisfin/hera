@@ -1,25 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Line} from 'react-chartjs-2'
-import './index.css'
-import { random } from 'node-forge';
+import { Line } from 'react-chartjs-2'
+import { ChartData } from './model/ChartData'
 
+import './index.css'
 
 var names = ['Alice', 'Emily', 'Kate']
 
-class ChartData {
-    constructor(label, data, i) {
-        const color = getColor(i)
-        this.backgroundColor = color
-        this.borderColor = color + '80'
-        this.pointHoverBackgroundColor = color
-        this.label = label
-        this.data = data
-        this.fill = false
-    }
-}
-
 class ChartA extends React.Component {
+    componentDidMount() {
+        fetch('http://localhost:3000/api/visit/select', {
+            method: 'GET',
+            // mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                // 'Access-Control-Allow-Origin': '*'
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.length)
+        })
+    }
     render() {
         const data1 = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
