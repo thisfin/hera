@@ -13,8 +13,14 @@ module.exports = {
             use: ['style-loader', 'css-loader', 'less-loader']
         }, {
             test: /\.js$/,
-            use: 'babel-loader',
-            exclude: /node_modules/
+            // use: 'babel-loader',
+            loader: 'babel-loader',
+            exclude: /node_modules/,
+            options: {
+                plugins: [
+                    ['import', {'libraryName': 'antd', 'libraryDirectory': 'es', 'style': 'css'}]
+                ]
+            }
         }]
     },
     plugins: [

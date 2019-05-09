@@ -45,7 +45,7 @@ export class VisitVersionChart extends React.Component {
 
             this.setState({
                 dates: dateArray.map(value => moment(value).format('YYYY-MM-DD')),
-                datas: resultArray.map((value, index) => new ChartData(value.name, value.datas.map(data => data.percent), index))
+                datas: resultArray.map((value, index) => new ChartData(value.name, value.datas.map(data => (data == undefined ? undefined : data.percent)), index))
             })
             console.log(resultArray)
         })
