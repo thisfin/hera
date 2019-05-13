@@ -1,17 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { VisitVersionChart } from './component/VisitVersionChart'
-import { VisitModal } from './component/VisitModal'
-import { Divider } from 'antd'
+import { Button } from 'antd'
 import './index.css'
 
 ReactDOM.render(
     <div>
-        <VisitVersionChart os="1" title="iOS"/>
-        <Divider />
-        <VisitVersionChart os="2" title="Android"/>
-        <Divider />
-        <VisitModal />
+        <Button type="link" href='visit-chart'>用户访问占比图表</Button>
+        <Button type="link" href='visit-input'>用户访问占比录入</Button>
+        <Button type="link" href='test'>test</Button>
+        <Button type="link" href='tmp'>tmp</Button>
     </div>, document.getElementById('root')
 )
 
