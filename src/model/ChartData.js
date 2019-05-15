@@ -1,8 +1,8 @@
-import { string } from "postcss-selector-parser";
+import { ColorUtil } from '../utils/ColorUtil'
 
 export class ChartData {
     constructor(label, data, i) {
-        const color = getColor(i)
+        const color = '#' + new ColorUtil().getColor(i)
         this.backgroundColor = color
         this.borderColor = color + '80'
         this.pointHoverBackgroundColor = color
@@ -10,10 +10,4 @@ export class ChartData {
         this.data = data
         this.fill = false
     }
-
-}
-
-function getColor(i) {
-    var colors = ['622599', '0054a0', 'aaba0a', 'dd7500', 'e23d28', '3d8e33', '3399ff', 'ff3399', 'fcd116', '999999']
-    return '#' + colors[i % colors.length];
 }

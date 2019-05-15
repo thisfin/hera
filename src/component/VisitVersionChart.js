@@ -47,7 +47,6 @@ export class VisitVersionChart extends React.Component {
                 dates: dateArray.map(value => moment(value).format('YYYY-MM-DD')),
                 datas: resultArray.map((value, index) => new ChartData(value.name, value.datas.map(data => (data == undefined ? undefined : data.percent)), index))
             })
-            console.log(resultArray)
         })
     }
     render() {
@@ -79,7 +78,8 @@ export class VisitVersionChart extends React.Component {
                         callback: value => {
                             return value + '%'
                         }
-                    }
+                    },
+                    position: 'left'
                     // ,
                     // scaleLabel: {
                     //     display: true,
