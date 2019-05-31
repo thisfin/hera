@@ -3,15 +3,15 @@ import { Pie } from 'react-chartjs-2'
 import { ColorUtil } from '../utils/ColorUtil'
 
 const sources = {
-    huawei: 22451,
-    oppo: 20587,
-    yt: 14935,
-    vivo: 12622,
-    tencent: 2485,
-    xiaomi: 3453,
-    ali: 78,
-    baidu: 98,
-    360: 5,
+    huawei: 22004,
+    oppo: 18956,
+    yt: 14343,
+    vivo: 13604,
+    tencent: 6471,
+    xiaomi: 3731,
+    ali: 109,
+    baidu: 103,
+    360: 7,
 }
 
 export class VisitSourceArea extends React.Component {
@@ -50,7 +50,7 @@ export class VisitSourceArea extends React.Component {
         const options = {
             title: {
                 display: true,
-                text: 'Android 渠道来源'
+                text: '近一周 Android 渠道来源'
             },
             legend: {
                 display: true,

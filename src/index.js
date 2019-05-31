@@ -3,6 +3,15 @@ import ReactDOM from 'react-dom'
 import { Button } from 'antd'
 import './index.css'
 
+// window.location.href = 'visit-chart'
+// window.location.href = 'demo-set-edit'
+// window.location.href = 'demo-set-list'
+// window.location.href = 'demo-pool-list'
+// window.location.href = 'demo-pool-edit'
+// window.location.href = 'demo-rule-edit'
+// window.location.href = 'demo-rule-list'
+window.location.href = 'link'
+
 ReactDOM.render(
     <div>
         <Button type="link" href='visit-chart'>用户访问占比图表</Button>
